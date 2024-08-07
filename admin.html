@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+<style>
+body {
+     background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.info {
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+strong {
+    color: black;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Selamat Datang Admin</h2>
+        <div class="info">
+            <table>
+                <tr>
+                    <td><strong>Produk</strong></td>
+                    <td><span id="totalProducts"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Kategori</strong></td>
+                    <td><span id="totalCategories"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>User</strong></td>
+                    <td><span id="totalUsers"></span></td>
+                </tr>
+            </table>
+        </div>
+        <a href="produk.php" class="btn">Masuk Produk</a>
+        <a href="kategori.php" class="btn">Masuk Kategori</a>
+
+        <br></br>
+
+        <a href="login.html" class="btn">Login</a>
+    </div>
+    <script>
+        // Simulated data
+        const exampleData = {
+            username: 'admin',
+            totalProducts: 120,
+            totalCategories: 15,
+            totalUsers: 45
+        };
+
+
+        // Get username from localStorage
+        const username = localStorage.getItem('username');
+
+        if (username) {
+            // Display user information and simulated data
+            document.getElementById('username').textContent = username;
+            document.getElementById('totalProducts').textContent = exampleData.totalProducts;
+            document.getElementById('totalCategories').textContent = exampleData.totalCategories;
+            document.getElementById('totalUsers').textContent = exampleData.totalUsers;
+        } else {
+            // If no username is found in localStorage, redirect to login
+            window.location.href = 'admin.html';
+        }
+    </script>
+</body>
+</html>
