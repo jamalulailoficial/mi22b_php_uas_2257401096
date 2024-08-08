@@ -99,6 +99,7 @@ td.aksi {
         <td><?php echo $row['id']?></td>
         <td><?php echo $row['name']?></td>
         <td>
+        <a href="edit_kategori.php?id=<?php echo $row['id'] ?>">Edit</a>
             <a href="hapus_kategori.php?id=<?php echo $row['id'] ?>">Hapus</a>
         </td>
     </tr>

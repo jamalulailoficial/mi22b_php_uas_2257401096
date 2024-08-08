@@ -1,10 +1,6 @@
 <form action="" method="post">
     <h2>Tambah Produk</h2>
-
-    Kode Produk <br>
-    <input type="text" name="kode_produk" required>
-    <br><br>
-
+    
     Nama Produk <br>
     <input type="text" name="nama_produk" required>
     <br><br>
@@ -17,14 +13,6 @@
         <option value="pakaian">Pakaian</option>
         <option value="makanan">Makanan</option>
     </select>
-    <br><br>
-
-    Deskripsi <br>
-    <textarea name="deskripsi" rows="4" required></textarea>
-    <br><br>
-
-    Gambar <br>
-    <input type="file" name="gambar" accept="image/*" required>
     <br><br>
 
     <a href="produk.php">Kembali</a>
